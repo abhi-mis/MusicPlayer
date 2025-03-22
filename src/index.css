@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.custom-player {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.custom-player .rhap_main-controls-button {
+  color: white !important;
+  transition: all 0.2s ease !important;
+}
+
+.custom-player .rhap_main-controls-button:hover {
+  transform: scale(1.1) !important;
+  color: #a855f7 !important;
+}
+
+.custom-player .rhap_volume-button {
+  color: white !important;
+  transition: color 0.2s ease !important;
+}
+
+.custom-player .rhap_volume-button:hover {
+  color: #a855f7 !important;
+}
+
+.custom-player .rhap_volume-bar {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 2px !important;
+  height: 4px !important;
+}
+
+.custom-player .rhap_volume-indicator {
+  background: #a855f7 !important;
+  transition: transform 0.2s ease !important;
+  width: 8px !important;
+  height: 8px !important;
+  top: -2px !important;
+  margin-left: -4px !important;
+}
+
+.custom-player .rhap_volume-indicator:hover {
+  transform: scale(1.2) !important;
+}
+
+.custom-player .rhap_progress-indicator {
+  background: #a855f7 !important;
+  transition: all 0.2s ease !important;
+  width: 12px !important;
+  height: 12px !important;
+  top: -4px !important;
+  margin-left: -6px !important;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.5) !important;
+}
+
+.custom-player .rhap_progress-indicator:hover {
+  transform: scale(1.2) !important;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.7) !important;
+}
+
+.custom-player .rhap_progress-filled {
+  background: #a855f7 !important;
+}
+
+.custom-player .rhap_progress-bar {
+  background: rgba(255, 255, 255, 0.2) !important;
+  height: 4px !important;
+  border-radius: 2px !important;
+}
+
+.custom-player .rhap_progress-bar:hover {
+  height: 6px !important;
+}
+
+.custom-player .rhap_time {
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 0.875rem !important;
+}
+
+.custom-player .rhap_container {
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-wave {
+  animation: wave 1s infinite;
+}
